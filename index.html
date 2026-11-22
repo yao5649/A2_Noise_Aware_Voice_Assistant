@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noise-Aware Voice Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Noise-Aware Voice Assistant</h1>
+            <p>A prototype for handling uncertain voice commands.</p>
+            <p>This simulation does not use a microphone or real speech recognition.</p>
+        </header>
+
+        <section>
+            <h2>1. Input settings</h2>
+
+            <label for="noise">Environment noise</label>
+            <select id="noise">
+                <option value="quiet">Quiet</option>
+                <option value="medium">Medium</option>
+                <option value="noisy">Noisy</option>
+            </select>
+
+            <label for="command">Simulated voice command</label>
+            <select id="command">
+                <option value="Turn on the lights">Turn on the lights</option>
+                <option value="Play music">Play music</option>
+                <option value="Set an alarm">Set an alarm</option>
+            </select>
+
+            <button id="simulate" type="button" disabled>
+                Simulate voice input
+            </button>
+        </section>
+
+        <section>
+            <h2>2. System response</h2>
+
+            <p>Simulated confidence:
+                <span id="confidence">Not available</span>
+            </p>
+
+            <p id="feedback" role="status">Waiting for input.</p>
+            <p>Confidence values are simulated, not measured recognition accuracy.</p>
+
+            <button id="confirm" type="button" disabled>Confirm</button>
+            <button id="cancel" type="button" disabled>Cancel</button>
+            <button id="retry" type="button" disabled>Try again</button>
+            <button id="reset" type="button" disabled>Reset</button>
+        </section>
+
+        <section>
+            <h2>3. Interaction log</h2>
+            <p id="empty-log">No recorded interactions.</p>
+            <ul id="log"></ul>
+        </section>
+    </main>
+
+</body>
+</html>
